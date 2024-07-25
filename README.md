@@ -92,7 +92,7 @@ ZeotapAssignmentApplication-1-main
 ### Create Rule
 
 ```bash
-curl -X POST http://localhost:8080/rules/create -H "Content-Type: application/json" -d "\"your rule string\""
+curl -X POST http://localhost:8080/rules/create -H "Content-Type: Text" -d "\"your rule string\""
 ```
 
 ### Combine Rules
