@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Zeotap Rule Engine Application is a Spring Boot project designed to create, combine, and evaluate rules using a rule engine. This application provides RESTful endpoints for interacting with the rule engine, allowing users to manage and evaluate complex rules.
+The Rule Engine Application is a Spring Boot project designed to create, combine, and evaluate rules using a rule engine. This application provides RESTful endpoints for interacting with the rule engine, allowing users to manage and evaluate complex rules.
 
 ## Features
 
