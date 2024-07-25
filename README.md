@@ -1,4 +1,4 @@
-# Zeotap Rule Engine Application
+# Rule Engine Application
 
 ## Overview
 
