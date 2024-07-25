@@ -36,6 +36,14 @@ ZeotapAssignmentApplication-1-main
 └── pom.xml
 ```
 
+## Tech Stack
+
+- **Backend**: Spring Boot
+- **Database**: PostgreSQL
+- **Build Tool**: Maven
+- **Language**: Java
+- **Other Tools**: Git
+
 ## Getting Started
 
 ### Prerequisites
@@ -43,6 +51,7 @@ ZeotapAssignmentApplication-1-main
 - Java 11 or higher
 - Maven
 - Git
+- PostgreSQL
 
 ### Installation
 
@@ -57,6 +66,19 @@ ZeotapAssignmentApplication-1-main
 3. Build the project using Maven:
    ```bash
    mvn clean install
+   ```
+
+### Database Setup
+
+1. Install PostgreSQL and create a new database.
+2. Update the `application.properties` file located in the `src/main/resources` directory with your PostgreSQL database configuration:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/your-database-name
+   spring.datasource.username=your-username
+   spring.datasource.password=your-password
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
    ```
 
 ### Running the Application
@@ -114,10 +136,6 @@ curl -X POST http://localhost:8080/rules/evaluate -H "Content-Type: application/
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin feature-branch`)
 5. Create a new Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
