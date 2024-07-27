@@ -4,7 +4,6 @@ import com.example.ruleengine.ProjectApplication1.model.Node;
 import com.example.ruleengine.ProjectApplication1.model.RequestData;
 import com.example.ruleengine.ProjectApplication1.model.Rule;
 import com.example.ruleengine.ProjectApplication1.repository.NodeRepository;
-import com.example.ruleengine.ProjectApplication1.repository.RuleRepository;
 import com.example.ruleengine.ProjectApplication1.service.RuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,15 +32,6 @@ public class RuleController {
     public Node createRule(@RequestBody String ruleString) {
         return ruleService.createRule(ruleString);
     }
-
-
-//    @PostMapping("/create")
-//    public ResponseEntity<?> createRule(@RequestBody Rule rule) {
-//        ruleService.createRule(String.valueOf(rule));
-//        return ResponseEntity.ok().body(Map.of("message", "Rule saved successfully"));
-//    }
-
-
 
     @PostMapping("/combine")
     public ResponseEntity<Node> combineRules(@RequestBody List<String> rules) {

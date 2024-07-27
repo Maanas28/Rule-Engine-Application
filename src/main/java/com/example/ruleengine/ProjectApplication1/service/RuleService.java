@@ -3,7 +3,7 @@ package com.example.ruleengine.ProjectApplication1.service;
 import com.example.ruleengine.ProjectApplication1.model.Node;
 import com.example.ruleengine.ProjectApplication1.model.Rule;
 import com.example.ruleengine.ProjectApplication1.repository.NodeRepository;
-import com.example.ruleengine.ProjectApplication1.repository.RuleRepository;
+//import com.example.ruleengine.ProjectApplication1.repository.RuleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.*;
@@ -20,14 +20,10 @@ public class RuleService {
     @Autowired
     private NodeRepository nodeRepository;
 
-    @Autowired
-    private RuleRepository ruleRepository;
-
 
     public  Node createRule(String ruleString) {
         // Parse ruleString to create AST
         Node root = createAST(ruleString);
-        ruleRepository.save(new Rule(ruleString,root));
         return nodeRepository.save(root);
     }
 
